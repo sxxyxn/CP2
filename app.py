@@ -17,12 +17,6 @@ def chatting():
     messages = chatbot.chatbot_response(message)
     return jsonify({'message': messages})
 
-@application.route('/mic', methods=['GET', 'POST'])
-def mic():
-    msg = request.json['message']
-    msgs = chatbot.chatbot_response(msg)
-    return jsonify({'message': msgs})
-
 if __name__ == '__main__':
     
     application.run(host='0.0.0.0')
